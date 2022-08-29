@@ -1,0 +1,8 @@
+{
+  "name": "node-roon-api-audioinput",
+  "version": "1.0.0",
+  "description": "Roon Api Audio Input Service (com.roonlabs.audioinput:1)",
+  "main": "lib.js",
+  "author": "Roon Labs, LLC",
+  "license": "Apache-2.0"
+}
