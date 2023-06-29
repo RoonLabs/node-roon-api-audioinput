@@ -14,11 +14,12 @@ function RoonApiAudioInput(core) {
 RoonApiAudioInput.services = [ { name: SVCNAME } ];
 
 RoonApiAudioInput.prototype.begin_session = function(options, cb) {
+    const moo = this.core.moo;
     let ret = {
         session_id: null,
         end_session(cb) {
             if (this.session_id)
-                self.send_request(SVCNAME + "/end_session", { session_id: this.session_id }, cb);
+                moo.send_request(SVCNAME + "/end_session", { session_id: this.session_id }, cb);
         }
     };
     this.core.moo.send_request(SVCNAME + "/begin_session", options,
